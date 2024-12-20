@@ -12,6 +12,9 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Header />
+      <MainPage />
     </ThemeProvider>
   );
 };
