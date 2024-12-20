@@ -6,4 +6,5 @@ export const getSettings = (): Settings => {
   return settings ? JSON.parse(settings) : { theme: 'system' };
 };
 
-export const setSettings = (settings: Settings) => localStorage.setItem(SETTINGS, JSON.stringify(settings));
+export const setSettings = (settings: Settings) =>
+  localStorage.setItem(SETTINGS, JSON.stringify(settings));
