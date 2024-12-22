@@ -1,0 +1,20 @@
+.errorPage{
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+}
+h1{
+    color: rgb(192, 7, 7);
+}
+p{
+color: red;
+}
+.err_button{
+    width: 20%;
+    height: 40px;
+    background-color: rgb(226, 41, 41);
+    font-weight: bold;
+    color: rgb(255, 246, 233);
+    border-radius: 5%;
+    border-color: white;
+}
