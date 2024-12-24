@@ -2,7 +2,6 @@ import Header from './components/Header';
 import MainPage from './pages/MainPage';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
-import { ErrorPage } from './pages/ErrorPage/ErrorPage';
 
 const App = () => {
   const theme = createTheme({
@@ -14,8 +13,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Header />
-      <ErrorPage />
-      {/* <MainPage /> */}
+      <MainPage />
     </ThemeProvider>
   );
 };

@@ -1,20 +1,23 @@
-.errorPage{
- display: flex;
- align-items: center;
- flex-direction: column;
+.errorPage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-h1{
-    color: rgb(192, 7, 7);
+
+h1 {
+    color: var(--error-color);
 }
-p{
-color: red;
+
+p {
+    color: var(--error-color);
 }
-.err_button{
+
+.err_button {
     width: 20%;
     height: 40px;
-    background-color: rgb(226, 41, 41);
+    background-color: var(--error-color);
     font-weight: bold;
-    color: rgb(255, 246, 233);
+    color: var(--error-textColor);
     border-radius: 5%;
-    border-color: white;
+    border-color: var(--error-textColor);
 }

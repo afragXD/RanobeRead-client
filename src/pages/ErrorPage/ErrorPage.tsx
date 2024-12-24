@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './ErrorPage.module.css';
 
-export const ErrorPage = () => {
+const ErrorPage = () => {
   const [hasError, setHasError] = useState(false);
 
   return (
@@ -14,3 +14,4 @@ export const ErrorPage = () => {
     </>
   );
 };
+export default ErrorPage;

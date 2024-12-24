@@ -4,7 +4,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import styles from './Header.module.css';
 import { useCallback, useMemo } from 'react';
-import Search from '../search/Search';
+import Search from '../search';
 
 const Header = () => {
   const { mode, setMode } = useColorScheme();
@@ -37,7 +37,6 @@ const Header = () => {
         <Search />
         <IconButton color="inherit" onClick={toggleColorMode}>
           {getIcon}
-          {/* <button onClick={console.log(mode)}></button> */}
         </IconButton>
       </Toolbar>
     </AppBar>
