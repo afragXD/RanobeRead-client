@@ -1,23 +1,23 @@
 .errorPage {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 h1 {
-    color: var(--error-color);
+  color: var(--error-color);
 }
 
 p {
-    color: var(--error-color);
+  color: var(--error-color);
 }
 
 .err_button {
-    width: 20%;
-    height: 40px;
-    background-color: var(--error-color);
-    font-weight: bold;
-    color: var(--error-textColor);
-    border-radius: 5%;
-    border-color: var(--error-textColor);
+  width: 20%;
+  height: 40px;
+  background-color: var(--error-color);
+  font-weight: bold;
+  color: var(--error-textColor);
+  border-radius: 5%;
+  border-color: var(--error-textColor);
 }
