@@ -3,20 +3,22 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import styles from './Header.module.css';
-import { useCallback, useMemo } from 'react';
-import Search from '../search';
+import { useCallback, useEffect, useMemo } from 'react';
+import Search from '../Search';
+import { getSettings, setSettings } from '../../helpers/storage';
 
 const Header = () => {
   const { mode, setMode } = useColorScheme();
 
+  useEffect(() => {
+    const { theme } = getSettings();
+    setMode(theme);
+  }, []);
+
   const toggleColorMode = useCallback(() => {
-    if (mode === 'dark') {
-      setMode('light');
-    } else if (mode === 'light') {
-      setMode('system');
-    } else {
-      setMode('dark');
-    }
+    const newMode = mode === 'dark' ? 'light' : mode === 'light' ? 'system' : 'dark';
+    setMode(newMode);
+    setSettings({ theme: newMode });
   }, [mode]);
   const getIcon = useMemo(() => {
     switch (mode) {
