@@ -4,6 +4,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import styles from './Header.module.css';
 import { useCallback, useMemo } from 'react';
+import Search from '../search';
 
 const Header = () => {
   const { mode, setMode } = useColorScheme();
@@ -17,7 +18,6 @@ const Header = () => {
       setMode('dark');
     }
   }, [mode]);
-
   const getIcon = useMemo(() => {
     switch (mode) {
       case 'light':
@@ -28,13 +28,13 @@ const Header = () => {
         return <AccessTimeFilledIcon />;
     }
   }, [mode]);
-
   return (
     <AppBar position="static" className={styles.header}>
       <Toolbar>
         <Typography variant="h6" className={styles.title}>
           RanobeRead
         </Typography>
+        <Search />
         <IconButton color="inherit" onClick={toggleColorMode}>
           {getIcon}
         </IconButton>

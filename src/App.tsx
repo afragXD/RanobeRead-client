@@ -9,7 +9,6 @@ const App = () => {
       dark: true,
     },
   });
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
