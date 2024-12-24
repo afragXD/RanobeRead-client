@@ -1,7 +1,7 @@
-import { SupportedColorScheme } from '@mui/material';
+export type ThemeMode = 'light' | 'dark' | 'system';
 
 interface Settings {
-  theme: SupportedColorScheme;
+  theme: ThemeMode;
 }
 
 export default Settings;

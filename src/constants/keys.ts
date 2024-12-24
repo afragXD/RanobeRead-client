@@ -1,2 +1,2 @@
 export const TOKEN = 'token';
-export const SETTINGS = 'settings';
+export const SETTINGS = 'appSettings';
