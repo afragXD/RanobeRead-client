@@ -1,6 +1,6 @@
-.topCard{
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
+.topCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
