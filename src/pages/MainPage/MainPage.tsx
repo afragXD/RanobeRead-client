@@ -1,18 +1,19 @@
-import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import { selectTopRanobesData } from '../../redux/selectors/getTop';
-import { fetchRanobes } from '../../redux/middleware/TopRanobesThunk';
-
+import stylesMain from './MainPage.module.css';
 const MainPage = () => {
-  // TODO: убрать после создания списка
-  const dispatch = useAppDispatch();
-  useEffect(() => {
-    dispatch(fetchRanobes('ranobe/'));
-  }, [dispatch]);
-  const topRanobesData = useAppSelector(selectTopRanobesData);
-  console.log(topRanobesData);
+  return (
+    <>
+      // TODO: убрать после создания списка
+      const dispatch = useAppDispatch();
+      useEffect(() => {
+        dispatch(fetchRanobes('ranobe/'));
+      }, [dispatch]);
+      const topRanobesData = useAppSelector(selectTopRanobesData);
+      console.log(topRanobesData);
 
-  return <p>rteg</p>;
+      return <p>rteg</p>;
+      <div className={stylesMain.topCard} />
+    </>
+  );
 };
 
 export default MainPage;
