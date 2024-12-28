@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Ranobe } from '../../types/ranobe';
+import { RanobeTop } from '../../types/ranobe';
 import { fetchRanobes } from '../middleware/TopRanobesThunk';
 
 export interface GetRanobesState {
-  ranobes: Ranobe[];
+  ranobes: RanobeTop[];
   isLoading: boolean;
   error: string | null;
 }
@@ -24,7 +24,7 @@ export const getRanobesSlice = createSlice({
         state.isLoading = true;
         state.error = null;
       })
-      .addCase(fetchRanobes.fulfilled, (state, action: PayloadAction<Ranobe[]>) => {
+      .addCase(fetchRanobes.fulfilled, (state, action: PayloadAction<RanobeTop[]>) => {
         state.isLoading = false;
         state.ranobes = action.payload;
       })

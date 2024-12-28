@@ -1,11 +1,11 @@
 import { InputAdornment, TextField } from '@mui/material';
 import styles from './Search.module.css';
 import SearchIcon from '@mui/icons-material/Search';
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 
 const Search = () => {
-  const [search, setSearch] = useState('');
-  const heandleSearch = (event: any) => {
+  const [_, setSearch] = useState('');
+  const heandleSearch = (event: ChangeEvent<HTMLInputElement>) => {
     setSearch(event.target.value);
   };
   return (

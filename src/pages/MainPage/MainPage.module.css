@@ -1,6 +1,6 @@
-.topCard {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+.mainContainer {
+  max-width: 1200px;
+  margin: 16px auto 0 auto;
+  padding: 0 15px;
+  width: 100%;
 }

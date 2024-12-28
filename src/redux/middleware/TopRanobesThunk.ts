@@ -1,9 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { Ranobe } from '../../types/ranobe';
+import { RanobeTop } from '../../types/ranobe';
 import { getRanobes } from '../../api/ranobes';
 import { AxiosError } from 'axios';
 
-export const fetchRanobes = createAsyncThunk<Ranobe[], string, { rejectValue: string }>(
+export const fetchRanobes = createAsyncThunk<RanobeTop[], string, { rejectValue: string }>(
   'ranobes/fetchTopRanobes',
   async (url, { rejectWithValue }) => {
     try {
