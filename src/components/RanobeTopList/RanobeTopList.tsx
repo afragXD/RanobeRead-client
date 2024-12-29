@@ -7,14 +7,16 @@ const RanobeTopList = () => {
   const topRanobesData = useAppSelector(selectTopRanobesData);
 
   return (
-    <div className={classes.listContainer}>
+    <>
       <div className={classes.title}>Лучшие</div>
-      <div className={classes.cardWrapper}>
-        {topRanobesData.map((ranobe) => (
-          <RanobeTopCard key={ranobe.id} {...ranobe} />
-        ))}
+      <div className={classes.listContainer}>
+        <div className={classes.cardWrapper}>
+          {topRanobesData.map((ranobe) => (
+            <RanobeTopCard key={ranobe.id} {...ranobe} />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

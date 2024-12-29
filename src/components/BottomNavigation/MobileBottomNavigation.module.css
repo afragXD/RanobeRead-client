@@ -1,0 +1,13 @@
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 50px;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .bottomNav.bottomNav {
+    display: none;
+  }
+}
