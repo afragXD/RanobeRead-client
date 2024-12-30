@@ -12,7 +12,9 @@ const Header = () => {
             RanobeRead
           </Typography>
           <Search />
-          <ThemeChanger />
+          <div className={classes.hideOnMobile}>
+            <ThemeChanger />
+          </div>
         </Toolbar>
       </AppBar>
     </>
