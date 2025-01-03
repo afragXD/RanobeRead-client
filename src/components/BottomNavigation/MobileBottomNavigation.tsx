@@ -2,7 +2,7 @@ import { BottomNavigation, BottomNavigationAction, useTheme } from '@mui/materia
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import clssses from './MobileBottomNavigation.module.css';
+import classes from './MobileBottomNavigation.module.css';
 import { useState } from 'react';
 
 const MobileBottomNavigation = () => {
@@ -13,9 +13,15 @@ const MobileBottomNavigation = () => {
     <BottomNavigation
       value={value}
       onChange={(_, newValue) => setValue(newValue)}
-      className={clssses.bottomNav}
-      style={{
-        backgroundColor: theme.palette.grey[900],
+      className={classes.bottomNav}
+      sx={{
+        backgroundColor: theme.palette.primary.contrastText,
+        '& .MuiBottomNavigationAction-root': {
+          color: theme.palette.text.secondary,
+        },
+        '& .Mui-selected': {
+          color: theme.palette.primary.main,
+        },
       }}
     >
       <BottomNavigationAction label="Home" icon={<HomeIcon />} />
