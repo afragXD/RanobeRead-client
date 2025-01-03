@@ -56,26 +56,3 @@
   right: 5px;
   transform: translateY(-50%);
 }
-
-.sceleton.sceleton {
-  width: 135px;
-  height: 249px;
-}
-
-@media (max-width: 768px) {
-  .leftArrow.leftArrow, .rightArrow.rightArrow {
-    display: none;
-  }
-
-  .sceleton.sceleton {
-    width: 115px;
-    height: 221px;
-  }
-}
-
-@media (max-width: 480px) {
-  .sceleton.sceleton {
-    width: 95px;
-    height: 200px;
-  }
-}

@@ -6,10 +6,11 @@ import {
 } from '../../redux/selectors/getTop';
 import RanobeTopCard from '../RanobeTopCard';
 import classes from './RanobeTopList.module.css';
-import { CircularProgress, Skeleton, Typography, useTheme } from '@mui/material';
+import { Typography, useTheme } from '@mui/material';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { IconButton } from '@mui/material';
+import Sceletons from '../Sceletons';
 
 const LeftArrow = () => {
   const theme = useTheme();
@@ -56,15 +57,7 @@ const RanobeTopList = () => {
 
   const isListReady = !error && !isLoading && topRanobesData.length;
 
-  const sceletons = [];
-
-  for (let index = 0; index < 15; index++) {
-    sceletons.push(
-      <Skeleton key={index} variant="rounded" animation="wave" className={classes.sceleton} />,
-    );
-  }
-
-  if (!error) {
+  if (error) {
     return (
       <div
         className={classes.container}
@@ -88,7 +81,7 @@ const RanobeTopList = () => {
           {isListReady &&
             topRanobesData.map((ranobe) => <RanobeTopCard key={ranobe.id} {...ranobe} />)}
           <RightArrow />
-          {isLoading && sceletons}
+          {isLoading && <Sceletons />}
         </div>
       </div>
     </>
