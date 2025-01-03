@@ -30,7 +30,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(25vh + 60px);
+  height: 200px;
   margin-top: 0;
   border-radius: 10px;
 }
@@ -39,7 +39,7 @@
   position: absolute;
   z-index: 1;
   height: 40px;
-  margin-top: 15vh;
+  margin-top: 125px;
   opacity: 0;
 }
 
@@ -57,8 +57,25 @@
   transform: translateY(-50%);
 }
 
+.sceleton.sceleton {
+  width: 135px;
+  height: 249px;
+}
+
 @media (max-width: 768px) {
   .leftArrow.leftArrow, .rightArrow.rightArrow {
     display: none;
+  }
+
+  .sceleton.sceleton {
+    width: 115px;
+    height: 221px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sceleton.sceleton {
+    width: 95px;
+    height: 200px;
   }
 }
