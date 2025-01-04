@@ -1,13 +1,10 @@
-import MobileBottomNavigation from './components/BottomNavigation';
-import Header from './components/Header';
-import MainPage from './pages/MainPage';
+import { RouterProvider } from 'react-router-dom';
+import routes from './utils/routes';
 
 const App = () => {
   return (
     <>
-      <Header />
-      <MainPage />
-      <MobileBottomNavigation />
+      <RouterProvider router={routes} />
     </>
   );
 };

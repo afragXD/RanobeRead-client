@@ -1,11 +1,17 @@
+import { Typography } from '@mui/material';
 import styles from './ErrorPage.module.css';
+import { NavLink } from 'react-router-dom';
 
 const ErrorPage = () => {
   return (
     <>
       <div className={styles.errorPage}>
-        <h1>Упс! Что-то пошло не так</h1>
-        <p>Произошла ошибка. Попробуйте перезагрузить страницу</p>
+        <Typography variant="h6" color="error">
+          Упс! Что-то пошло не так
+        </Typography>
+        <Typography color="error">
+          Произошла ошибка. Попробуйте перейти на <NavLink to="/">главную страницу</NavLink> сайта.
+        </Typography>
       </div>
     </>
   );

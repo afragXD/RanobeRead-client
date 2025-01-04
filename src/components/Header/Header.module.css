@@ -10,15 +10,18 @@
 .toolbar.toolbar {
   padding-left: 24px;
   padding-right: 24px;
+  justify-content: space-between;
 }
 
 .title {
-  flex-grow: 1;
   font-weight: bold;
+  user-select: none;
 }
 
 .hideOnMobile {
   display: flex;
+  text-decoration: none;
+  color: var(--logo-color);
 }
 
 @media (max-width: 768px) {

@@ -1,9 +1,9 @@
 .search {
-  width: 40%;
+  width: 40vw;
 }
 
 @media (max-width: 768px) {
   .search {
-    width: 100%;
+    width: 93vw;
   }
 }
