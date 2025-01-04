@@ -12,7 +12,7 @@ const Header = () => {
       <AppBar position="fixed" className={classes.header}>
         <Toolbar className={classes.toolbar}>
           <NavLink to="/" className={clsx(classes.hideOnMobile, classes.title)}>
-            <Logo />
+            <Logo fontSize="medium" />
             <Typography variant="h6">RanobeRead</Typography>
           </NavLink>
           <Box display="flex">
