@@ -18,6 +18,8 @@
   --shadow-color: rgba(0, 0, 0, 0.2);
 
   --logo-color: rgba(200, 200, 200, 1);
+
+  --link-color: rgb(25, 118, 210);
 }
 
 body {

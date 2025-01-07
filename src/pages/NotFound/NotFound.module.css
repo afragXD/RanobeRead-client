@@ -1,0 +1,52 @@
+.errorPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 16px;
+}
+
+.errorPage img {
+  width: 50%;
+  height: auto;
+}
+
+.errorPage a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.errorPage a:hover {
+  text-decoration: underline;
+}
+
+.errorText {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.errorHeading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .errorPage {
+    padding: 12px;
+  }
+
+  .errorHeading {
+    font-size: 1.5rem;
+  }
+
+  .errorText {
+    font-size: 1rem;
+  }
+
+  .errorPage img {
+    max-width: 80%;
+  }
+}
