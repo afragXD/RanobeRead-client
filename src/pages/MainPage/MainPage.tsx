@@ -1,3 +1,4 @@
+import RanobeList from '../../components/RanobeList';
 import RanobeTopList from '../../components/RanobeTopList';
 import { useAppSelector } from '../../hooks/redux';
 import { selectRanobesError } from '../../redux/selectors/getRanobes';
@@ -15,6 +16,7 @@ const MainPage = () => {
   return (
     <div className={classes.mainContainer}>
       <RanobeTopList />
+      <RanobeList />
     </div>
   );
 };

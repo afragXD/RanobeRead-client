@@ -1,0 +1,36 @@
+.listContainer {
+  overflow-x: auto;
+  padding: 0 10px;
+}
+
+.listContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.title {
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cardWrapper {
+  display: inline-flex;
+  gap: 10px;
+}
+
+.empty {
+  width: 100%;
+  font-weight: 900;
+  font-size: 5vw;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin-top: 0;
+  border-radius: 10px;
+}

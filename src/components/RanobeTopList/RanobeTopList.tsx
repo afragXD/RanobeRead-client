@@ -7,6 +7,7 @@ import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { IconButton } from '@mui/material';
 import Sceletons from '../Sceletons';
+import { top } from '../../constants/titles';
 
 const LeftArrow = () => {
   const theme = useTheme();
@@ -52,7 +53,7 @@ const RanobeTopList = () => {
 
   return (
     <>
-      <div className={classes.title}>Лучшие</div>
+      <div className={classes.title}>{top}</div>
       <div className={classes.listContainer}>
         <div className={classes.cardWrapper}>
           <LeftArrow />
