@@ -1,4 +1,4 @@
-import { AppBar, Box, Toolbar, Typography } from '@mui/material';
+import { AppBar, Toolbar, Typography } from '@mui/material';
 import classes from './Header.module.css';
 import Search from '../Search';
 import ThemeChanger from '../ThemeChanger';
@@ -15,12 +15,12 @@ const Header = () => {
             <Logo fontSize="medium" />
             <Typography variant="h6">RanobeRead</Typography>
           </NavLink>
-          <Box display="flex">
+          <div className={classes.searchBox}>
             <Search />
             <div className={classes.hideOnMobile}>
               <ThemeChanger />
             </div>
-          </Box>
+          </div>
         </Toolbar>
       </AppBar>
     </>

@@ -1,13 +1,15 @@
 import { SwipeableDrawer } from '@mui/material';
-import classes from './Menu.module.css';
+import classes from './Drawer.module.css';
+import { ReactNode } from 'react';
 
-interface MenuProps {
+interface DrawerProps {
   isDrawerOpen: boolean;
   handleClose: () => void;
   handleOpen: () => void;
+  children: ReactNode;
 }
 
-const Menu = ({ isDrawerOpen, handleClose, handleOpen }: MenuProps) => {
+const Drawer = ({ isDrawerOpen, handleClose, handleOpen, children }: DrawerProps) => {
   return (
     <SwipeableDrawer
       anchor="right"
@@ -15,7 +17,7 @@ const Menu = ({ isDrawerOpen, handleClose, handleOpen }: MenuProps) => {
       onOpen={handleOpen}
       onClose={handleClose}
       allowSwipeInChildren={true}
-      swipeAreaWidth={50}
+      swipeAreaWidth={25}
       ModalProps={{
         keepMounted: true,
         disableScrollLock: true,
@@ -25,12 +27,9 @@ const Menu = ({ isDrawerOpen, handleClose, handleOpen }: MenuProps) => {
         paper: classes.paper,
       }}
     >
-      <p>тут будет меню</p>
-      <p>egerg</p>
-      <p>egerg</p>
-      <p>egerg</p>
+      {children}
     </SwipeableDrawer>
   );
 };
 
-export default Menu;
+export default Drawer;

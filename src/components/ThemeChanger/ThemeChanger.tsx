@@ -6,7 +6,11 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import classes from './ThemeChanger.module.css';
 
-const ThemeChanger = () => {
+interface ThemeChangerProps {
+  isRenderAsIcon?: boolean;
+}
+
+const ThemeChanger = ({ isRenderAsIcon = false }: ThemeChangerProps) => {
   const { mode, setMode } = useColorScheme();
 
   useEffect(() => {
@@ -30,6 +34,10 @@ const ThemeChanger = () => {
         return <AccessTimeFilledIcon />;
     }
   }, [mode]);
+
+  if (isRenderAsIcon) {
+    return <span onClick={toggleColorMode}>{getIcon}</span>;
+  }
 
   return (
     <IconButton className={classes.hideOnMobile} color="inherit" onClick={toggleColorMode}>

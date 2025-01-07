@@ -4,10 +4,9 @@ import classes from './MobileBottomNavigation.module.css';
 import { useState } from 'react';
 import Logo from '../Logo';
 import ThemeChanger from '../ThemeChanger';
-import Menu from '../Menu';
+import Drawer from '../Drawer';
 
 const MobileBottomNavigation = () => {
-  const [value, setValue] = useState(0);
   const theme = useTheme();
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -18,8 +17,6 @@ const MobileBottomNavigation = () => {
     <>
       <BottomNavigation
         showLabels
-        value={value}
-        onChange={(_, newValue) => setValue(newValue)}
         className={classes.bottomNav}
         sx={{
           backgroundColor: theme.palette.primary.contrastText,
@@ -29,16 +26,17 @@ const MobileBottomNavigation = () => {
               color: theme.palette.primary.main,
             },
           },
-          '& .Mui-selected': {
-            color: theme.palette.text.secondary,
-          },
         }}
       >
-        <BottomNavigationAction label="Тема" icon={<ThemeChanger />} />
+        <BottomNavigationAction label="Тема" icon={<ThemeChanger isRenderAsIcon />} />
         <BottomNavigationAction label="" icon={<Logo fontSize="large" />} />
         <BottomNavigationAction label="Меню" icon={<MenuIcon />} onClick={handleOpen} />
       </BottomNavigation>
-      <Menu isDrawerOpen={isDrawerOpen} handleOpen={handleOpen} handleClose={handleClose} />
+      <Drawer isDrawerOpen={isDrawerOpen} handleOpen={handleOpen} handleClose={handleClose}>
+        <div>
+          <p>ergwg</p>
+        </div>
+      </Drawer>
     </>
   );
 };
