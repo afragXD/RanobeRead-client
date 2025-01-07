@@ -1,28 +1,66 @@
 .errorPage {
-  height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  a {
-    text-decoration: none;
+  min-height: 100vh;
+  text-align: center;
+  padding: 16px;
+}
+
+.errorPage img {
+  width: 50%;
+  height: auto;
+}
+
+.errorPage a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.errorPage a:hover {
+  text-decoration: underline;
+}
+
+.errorText {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.errorHeading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.retryButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .errorPage {
+    padding: 12px;
   }
-}
 
-h1 {
-  color: var(--error-color);
-}
+  .errorHeading {
+    font-size: 1.5rem;
+  }
 
-p {
-  color: var(--error-color);
-}
+  .errorText {
+    font-size: 1rem;
+  }
 
-.err_button {
-  width: 20%;
-  height: 40px;
-  background-color: var(--error-color);
-  font-weight: bold;
-  color: var(--error-textColor);
-  border-radius: 5%;
-  border-color: var(--error-textColor);
+  .errorPage img {
+    max-width: 80%;
+  }
+  
+  .retryButton {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
 }

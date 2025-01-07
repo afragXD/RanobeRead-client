@@ -1,12 +1,8 @@
 import { useAppSelector } from '../../hooks/redux';
-import {
-  selectTopRanobesData,
-  selectTopRanobesError,
-  selectTopRanobesLoading,
-} from '../../redux/selectors/getTop';
+import { selectTopRanobesData, selectTopRanobesLoading } from '../../redux/selectors/getTop';
 import RanobeTopCard from '../RanobeTopCard';
 import classes from './RanobeTopList.module.css';
-import { Typography, useTheme } from '@mui/material';
+import { useTheme } from '@mui/material';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { IconButton } from '@mui/material';
@@ -51,26 +47,8 @@ const RightArrow = () => {
 const RanobeTopList = () => {
   const topRanobesData = useAppSelector(selectTopRanobesData);
   const isLoading = useAppSelector(selectTopRanobesLoading);
-  const error = useAppSelector(selectTopRanobesError);
 
-  const theme = useTheme();
-
-  const isListReady = !error && !isLoading && topRanobesData.length;
-
-  if (error) {
-    return (
-      <div
-        className={classes.container}
-        style={{
-          backgroundColor: theme.palette.primary.main,
-        }}
-      >
-        <Typography variant="h6" color="error">
-          Произошла ошибка: {error}
-        </Typography>
-      </div>
-    );
-  }
+  const isListReady = !isLoading && topRanobesData.length;
 
   return (
     <>
