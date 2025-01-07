@@ -1,11 +1,14 @@
 import RanobeTopList from '../../components/RanobeTopList';
 import { useAppSelector } from '../../hooks/redux';
-import { selectTopRanobesError } from '../../redux/selectors/getTop';
+import { selectRanobesError } from '../../redux/selectors/getRanobes';
+import { selectTopRanobesError } from '../../redux/selectors/getTopRanobes';
 import ErrorPage from '../ErrorPage';
 import classes from './MainPage.module.css';
 
 const MainPage = () => {
-  const error = useAppSelector(selectTopRanobesError);
+  const errorTop = useAppSelector(selectTopRanobesError);
+  const errorList = useAppSelector(selectRanobesError);
+  const error = errorTop || errorList;
 
   if (error) return <ErrorPage />;
 

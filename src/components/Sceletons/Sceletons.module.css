@@ -3,7 +3,7 @@
   height: 249px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .sceleton.sceleton {
     width: 115px;
     height: 221px;

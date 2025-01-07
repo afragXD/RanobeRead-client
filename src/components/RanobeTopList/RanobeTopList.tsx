@@ -1,5 +1,5 @@
 import { useAppSelector } from '../../hooks/redux';
-import { selectTopRanobesData, selectTopRanobesLoading } from '../../redux/selectors/getTop';
+import { selectTopRanobesData, selectTopRanobesLoading } from '../../redux/selectors/getTopRanobes';
 import RanobeTopCard from '../RanobeTopCard';
 import classes from './RanobeTopList.module.css';
 import { useTheme } from '@mui/material';

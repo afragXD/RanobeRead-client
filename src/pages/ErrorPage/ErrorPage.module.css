@@ -11,6 +11,7 @@
 .errorPage img {
   width: 50%;
   height: auto;
+  margin-top: 10px;
 }
 
 .errorPage a {
@@ -33,16 +34,17 @@
   margin-bottom: 20px;
 }
 
-.retryButton {
+.retryButton.retryButton {
   padding: 10px 20px;
   font-size: 1rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   text-transform: uppercase;
+  margin-top: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .errorPage {
     padding: 12px;
   }
@@ -58,7 +60,7 @@
   .errorPage img {
     max-width: 80%;
   }
-  
+
   .retryButton {
     font-size: 0.9rem;
     padding: 8px 16px;

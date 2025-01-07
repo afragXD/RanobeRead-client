@@ -33,7 +33,7 @@
   margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .errorPage {
     padding: 12px;
   }

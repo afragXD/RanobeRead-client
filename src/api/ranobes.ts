@@ -3,9 +3,9 @@ import { Ranobe, RanobeTop } from '../types/ranobe';
 import api from './axios';
 
 export const getRanobes = () => {
-  return api.get<RanobeTop[]>(`${GET_RANOBE}${GET_TOP}`);
+  return api.get<Ranobe[]>(`${GET_RANOBE}`);
 };
 
 export const getTopRanobes = () => {
-  return api.get<Ranobe[]>(`${GET_RANOBE}`);
+  return api.get<RanobeTop[]>(`${GET_RANOBE}${GET_TOP}`);
 };
