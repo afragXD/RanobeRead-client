@@ -1,7 +1,7 @@
 import Grid2 from '@mui/material/Grid2';
 import { useAppSelector } from '../../hooks/redux';
 import { selectRanobesData, selectRanobesLoading } from '../../redux/selectors/getRanobes';
-import Sceletons from '../Sceletons';
+import Skeletons from '../Skeletons';
 import classes from './RanobeList.module.css';
 import RanobeTopCard from '../RanobeTopCard';
 import { list } from '../../constants/titles';
@@ -23,7 +23,7 @@ const RanobeList = () => {
                 <RanobeTopCard {...ranobe} />
               </Grid2>
             ))}
-          {isLoading && <Sceletons isGrid />}
+          {isLoading && <Skeletons isGrid />}
         </Grid2>
       </div>
     </>

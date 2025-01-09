@@ -6,7 +6,7 @@ import { useTheme } from '@mui/material';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { IconButton } from '@mui/material';
-import Sceletons from '../Sceletons';
+import Skeletons from '../Skeletons';
 import { top } from '../../constants/titles';
 
 const LeftArrow = () => {
@@ -60,7 +60,7 @@ const RanobeTopList = () => {
           {isListReady &&
             topRanobesData.map((ranobe) => <RanobeTopCard key={ranobe.id} {...ranobe} />)}
           <RightArrow />
-          {isLoading && <Sceletons />}
+          {isLoading && <Skeletons />}
         </div>
       </div>
     </>

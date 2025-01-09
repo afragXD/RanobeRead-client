@@ -1,17 +1,17 @@
-.sceleton.sceleton {
+.skeleton.skeleton {
   width: 135px;
   height: 249px;
 }
 
 @media (max-width: 960px) {
-  .sceleton.sceleton {
+  .skeleton.skeleton {
     width: 115px;
     height: 221px;
   }
 }
 
 @media (max-width: 480px) {
-  .sceleton.sceleton {
+  .skeleton.skeleton {
     width: 95px;
     height: 200px;
   }
